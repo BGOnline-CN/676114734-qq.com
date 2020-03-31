@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>client demo</title>
+</head>
+
+<body>
+  请将该页面放到不同域/端口的服务器环境中
+  <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2.3.0/dist/socket.io.js"></script>
+  <script>
+
+    const socket = io('http://localhost:7003', {
+      query: 'id=any id',
+      transportOptions: {
+        polling: {
+          extraHeaders: {
+            "Authorization": 'any jwt'
+          }
+        }
+      }
+    });
+    socket.on('connect', () => {
+      console.log('connect success')
+    });
+
+  </script>
+</body>
+
+</html>
