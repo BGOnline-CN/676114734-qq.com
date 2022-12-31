@@ -12,6 +12,6 @@
     "socket.io-client": "^2.0.1"
   },
   "devDependencies": {
-    "egg-bin": "^4.3.6"
+    "egg-bin": "^4.20.0"
   }
 }
